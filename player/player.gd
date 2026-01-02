@@ -14,8 +14,20 @@ func _process(delta: float) -> void:
 
 
 func move_player(dir: Vector2):
-	pass
+	var new_position: Vector2 = global_position + dir
+	global_position = new_position
 
 
 func _unhandled_input(event: InputEvent) -> void:
-	pass
+	if event.is_action_pressed("move_left"):
+		move_player(Vector2(-block_size, 0))
+		
+	elif event.is_action_pressed("move_right"):
+		move_player(Vector2(block_size, 0))
+	
+	elif event.is_action_pressed("move_up"):
+		move_player(Vector2(0, -block_size))
+	
+	elif event.is_action_pressed("move_down"):
+		move_player(Vector2(0, block_size))
+		
