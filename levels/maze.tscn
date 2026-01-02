@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3pwmqfaoawc3"]
+
+[ext_resource type="PackedScene" uid="uid://dj55sb8se404b" path="res://levels/maze_layout.tscn" id="1_1y6au"]
+[ext_resource type="PackedScene" uid="uid://3gsc35gun4ml" path="res://player/player.tscn" id="2_g8a5a"]
+
+[node name="Maze" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="MazeLayout" parent="." instance=ExtResource("1_1y6au")]
+
+[node name="Player" parent="." instance=ExtResource("2_g8a5a")]
+
+[editable path="MazeLayout"]
