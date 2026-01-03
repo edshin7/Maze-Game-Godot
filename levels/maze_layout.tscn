@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dj55sb8se404b"]
+[gd_scene load_steps=10 format=3 uid="uid://dj55sb8se404b"]
 
 [ext_resource type="Texture2D" uid="uid://c0x3ags1ix6l3" path="res://levels/Block Brick.png" id="1_0lh1w"]
 [ext_resource type="Texture2D" uid="uid://n78nav5b7dtw" path="res://player/Copycat.png" id="2_q4ihm"]
 [ext_resource type="Texture2D" uid="uid://bo3gn1k8hpk7c" path="res://levels/Block crumbling 2.png" id="3_ny5rv"]
+[ext_resource type="Texture2D" uid="uid://ccwr8svf0ihb8" path="res://levels/Grass.png" id="4_g57iq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q4ihm"]
 texture = ExtResource("1_0lh1w")
@@ -29,12 +30,20 @@ texture = ExtResource("3_ny5rv")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dn2n2"]
+texture = ExtResource("4_g57iq")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_ny5rv"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_q4ihm")
 sources/1 = SubResource("TileSetAtlasSource_ny5rv")
 sources/2 = SubResource("TileSetAtlasSource_g57iq")
+sources/4 = SubResource("TileSetAtlasSource_dn2n2")
 
 [node name="MazeLayout" type="Node2D"]
 
