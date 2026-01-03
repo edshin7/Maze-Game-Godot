@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://sgnn0ojspyrq"]
+[gd_scene load_steps=2 format=3 uid="uid://sgnn0ojspyrq"]
+
+[ext_resource type="Script" uid="uid://cuqu4wdib56yp" path="res://UI/main_menu.gd" id="1_p8ccj"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p8ccj")
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 1
@@ -35,6 +38,7 @@ offset_bottom = 176.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 16
+alignment = 1
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 layout_mode = 2
@@ -45,3 +49,6 @@ text = "Play"
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Exit"
+
+[connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/ExitButton" to="." method="_on_exit_button_pressed"]
