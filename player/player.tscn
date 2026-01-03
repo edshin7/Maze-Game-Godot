@@ -7,7 +7,7 @@
 radius = 8.0
 
 [node name="Player" type="Area2D"]
-collision_mask = 2
+collision_mask = 6
 script = ExtResource("1_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -21,3 +21,5 @@ shape = SubResource("CircleShape2D_rkbax")
 [node name="WallChecker" type="RayCast2D" parent="."]
 target_position = Vector2(0, 32)
 collision_mask = 2
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

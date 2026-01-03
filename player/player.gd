@@ -19,7 +19,7 @@ func move_player(dir: Vector2):
 	wall_checker.target_position = dir
 	wall_checker.force_raycast_update()
 	
-	if wall_checker.is_colliding(): return
+	#if wall_checker.is_colliding(): return
 	
 	var new_position: Vector2 = global_position + dir
 	global_position = new_position
@@ -38,3 +38,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("move_down"):
 		move_player(Vector2(0, block_size))
 		
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area is Goal:
+		var goal: Goal = area as Goal
+		goal.go_to_next_level()
