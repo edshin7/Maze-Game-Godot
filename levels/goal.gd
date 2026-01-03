@@ -12,5 +12,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func go_to_next_level():
+
+func call_go_to_next_level():
 	get_tree().change_scene_to_file(next_level)
+
+func go_to_next_level():
+	call_deferred("call_go_to_next_level")
