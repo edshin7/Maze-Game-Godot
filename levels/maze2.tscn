@@ -30,14 +30,15 @@ position = Vector2(272, 272)
 [node name="Gate3" parent="Gates" instance=ExtResource("2_7g6nn")]
 position = Vector2(464, 304)
 
+[node name="Key" parent="." node_paths=PackedStringArray("gates_node") instance=ExtResource("5_7g6nn")]
+position = Vector2(176, 176)
+gates_node = NodePath("../Gates")
+
 [node name="Player" parent="." instance=ExtResource("2_220ik")]
 position = Vector2(112, 368)
 
 [node name="Goal" parent="." instance=ExtResource("3_7g6nn")]
 position = Vector2(528, 368)
 next_level = "res://levels/maze.tscn"
-
-[node name="Key" parent="." instance=ExtResource("5_7g6nn")]
-position = Vector2(176, 176)
 
 [editable path="MazeLayout"]
