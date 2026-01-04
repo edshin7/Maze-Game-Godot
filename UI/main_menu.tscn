@@ -16,10 +16,11 @@ layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_top = 64.0
-offset_bottom = 128.0
+offset_bottom = 147.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 60
-text = "Kitty Maze"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+text = "Kitty Game"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -42,11 +43,13 @@ alignment = 1
 
 [node name="PlayButton" type="Button" parent="Buttons"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_font_sizes/font_size = 30
 text = "Play"
 
 [node name="ExitButton" type="Button" parent="Buttons"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_font_sizes/font_size = 30
 text = "Exit"
 
