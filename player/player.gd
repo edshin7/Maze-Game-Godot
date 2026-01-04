@@ -44,3 +44,7 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is Goal:
 		var goal: Goal = area as Goal
 		goal.go_to_next_level()
+	
+	elif area is Key:
+		var key: Key = area as Key
+		key.unlock_gates()

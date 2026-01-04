@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://be1yk4g4j4v1q"]
+[gd_scene load_steps=4 format=3 uid="uid://be1yk4g4j4v1q"]
 
 [ext_resource type="Texture2D" uid="uid://5pf8b25fcya2" path="res://levels/Key.png" id="1_lyioq"]
+[ext_resource type="Script" uid="uid://dvxresewtloun" path="res://levels/key.gd" id="1_qt2a7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qt2a7"]
 radius = 8.0
 
 [node name="Key" type="Area2D"]
+collision_layer = 9
+script = ExtResource("1_qt2a7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_lyioq")
