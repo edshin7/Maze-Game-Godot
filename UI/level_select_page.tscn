@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bpr1ack8uafwm"]
+[gd_scene load_steps=2 format=3 uid="uid://bpr1ack8uafwm"]
+
+[ext_resource type="PackedScene" uid="uid://dpjuimg7m8kmi" path="res://UI/level_button.tscn" id="1_h3n13"]
 
 [node name="LevelSelectPage" type="Control"]
 layout_mode = 3
@@ -27,3 +29,10 @@ offset_left = 64.0
 offset_top = 192.0
 offset_right = 576.0
 offset_bottom = 256.0
+alignment = 1
+
+[node name="LevelButton" parent="HBoxContainer" instance=ExtResource("1_h3n13")]
+layout_mode = 2
+text = "Level 1"
+level_name = "Level 1"
+level_path = "res://levels/maze.tscn"
