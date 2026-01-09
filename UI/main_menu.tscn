@@ -47,6 +47,12 @@ theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
 theme_override_font_sizes/font_size = 30
 text = "Play"
 
+[node name="LevelsButton" type="Button" parent="Buttons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 30
+text = "Levels"
+
 [node name="ExitButton" type="Button" parent="Buttons"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
@@ -54,4 +60,5 @@ theme_override_font_sizes/font_size = 30
 text = "Exit"
 
 [connection signal="pressed" from="Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Buttons/LevelsButton" to="." method="_on_levels_button_pressed"]
 [connection signal="pressed" from="Buttons/ExitButton" to="." method="_on_exit_button_pressed"]
